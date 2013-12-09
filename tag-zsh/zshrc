@@ -35,4 +35,8 @@ do
   source $file
 done
 
+OLDZSH=$ZSH # save path for our scripts
+ZSH=$ZSH/oh-my-zsh.no-autoload # modify it for oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+ZSH=$OLDZSH # just for further purpose
 unset config_files
