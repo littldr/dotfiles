@@ -3,6 +3,7 @@
 	email = E-Mail
 [alias]
 	co = checkout
+	wtf = !$ZSH/../bin/git-wtf
 [color]
 	diff = auto
 	status = auto
