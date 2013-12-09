@@ -37,6 +37,10 @@ done
 
 OLDZSH=$ZSH # save path for our scripts
 ZSH=$ZSH/oh-my-zsh.no-autoload # modify it for oh-my-zsh
+
+# Oh My Zsh config
+ZSH_THEME="aussiegeek"
+plugins=(git bower brew bundler colorize django gem osx npm pip rbenv sublime sudo vundle)
 source $ZSH/oh-my-zsh.sh
 ZSH=$OLDZSH # just for further purpose
 unset config_files
