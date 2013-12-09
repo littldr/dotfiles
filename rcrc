@@ -1,0 +1,3 @@
+EXCLUDES="README.md Brewfile install.sh script zsh *.example *.hook"
+DOTFILES_DIRS="$HOME/.dotfiles"
+TAGS="zsh"
