@@ -3,7 +3,7 @@ export DOTFILES_DIRS=$HOME/.dotfiles
 # use .rcrc
 if [[ -a ~/.rcrc ]]
 then
-  source ~/${.rcrc
+  source ~/.rcrc
 fi
 
 # shortcut to this dotfiles path is $ZSH
