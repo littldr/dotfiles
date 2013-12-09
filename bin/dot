@@ -1,0 +1,12 @@
+#!/bin/zsh
+#
+# dot
+#
+# `dot` handles installation, updates, things like that. Run it periodically
+# to make sure you're on the latest and greatest.
+# Source: https://github.com/pgolm/dotfiles/blob/master/bin/dot
+
+rcup -k
+
+# reload
+. $HOME/.zshrc
