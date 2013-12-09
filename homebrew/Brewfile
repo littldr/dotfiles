@@ -1,0 +1,7 @@
+update
+upgrade
+
+install grc
+install coreutils
+install spark
+install terminal-notifier

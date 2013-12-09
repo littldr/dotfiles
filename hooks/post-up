@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+set -e
+
+PWD_RECOVERY=`pwd`
+cd $DOTFILES_DIRS
+find . -name post.hook | while read hook ; do zsh -c "${hook}" ; done
+
+cd $PWD_RECOVERY
