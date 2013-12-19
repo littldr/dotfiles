@@ -6,10 +6,10 @@ then
   source ~/.rcrc
 fi
 
-ZSH=$DOTFILES_DIRS/zsh/oh-my-zsh.no-autoload
+#ZSH=$DOTFILES_DIRS/zsh/oh-my-zsh.no-autoload
 # Oh My Zsh config
-plugins=(git bower brew colorize django gem osx npm pip sublime sudo vundle)
-source $ZSH/oh-my-zsh.sh
+#plugins=(git bower brew colorize django gem osx npm pip sublime sudo vundle)
+#source $ZSH/oh-my-zsh.sh
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$DOTFILES_DIRS/zsh
