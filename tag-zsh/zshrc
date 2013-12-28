@@ -17,6 +17,9 @@ export ZSH=$DOTFILES_DIRS/zsh
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Documents/Workspace
 
+# your ssh folder for pubkey command
+export SSH_KEY_FOLDER=~/.ssh
+
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 config_files=(${config_files:#*/*no-autoload*}) # remove the no autoload paths

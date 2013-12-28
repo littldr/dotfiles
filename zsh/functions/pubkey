@@ -1,0 +1,4 @@
+if result=$(more $SSH_KEY_FOLDER/$1); then
+    echo "$result" | pbcopy
+    echo '=> Public key copied to pasteboard.'
+fi
