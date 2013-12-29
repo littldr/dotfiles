@@ -20,6 +20,9 @@ export PROJECTS=~/Documents/Workspace
 # your ssh folder for pubkey command
 export SSH_KEY_FOLDER=~/.ssh
 
+# Path to your favorite SQLite Browser
+export SQLITE_BROWSER_PATH=/Applications/SQLite\ Database\ Browser.app/Contents/MacOS/sqlitebrowser
+
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 config_files=(${config_files:#*/*no-autoload*}) # remove the no autoload paths
