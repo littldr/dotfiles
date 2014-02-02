@@ -6,19 +6,6 @@ _pyenv_prompt_info() {
 	[[ -a .python-version ]] && echo " %{$fg[yellow]%}<$(python_version_info)>"
 }
 
-# not working :/
-_convert_return_code() {
-	if [[ $status -gt 0 && $status -le 20 ]]; then
-		(( dig = 159 + $status ))
-		hex_dig="$(echo "obase=16; $dig" | bc)"
-		echo "\xe2\x91\x$hex_dig"
-	elif [[ $status -eq 0 ]]; then
-		echo "\xe2\x93\xaa"
-	else
-		echo $status
-	fi
-}
-
 local return_code="%(?..%{$fg_bold[red]%}%? ↵%{$reset_color%})"
 local user_host='%{$fg_bold[green]%}%n@%m%{$reset_color%}'
 local current_dir='%{$fg_bold[blue]%}%~%{$reset_color%}'
