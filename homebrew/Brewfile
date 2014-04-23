@@ -5,3 +5,4 @@ install grc
 install coreutils
 install spark
 install pyenv-virtualenv
+install z

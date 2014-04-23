@@ -49,4 +49,6 @@ do
   source $file
 done
 
+source `brew --prefix`/etc/profile.d/z.sh
+
 unset config_files

@@ -41,3 +41,5 @@ bindkey '^[[1;2D' backward-delete-word
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
+
+alias be='bundle exec'
