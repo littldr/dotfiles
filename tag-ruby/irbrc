@@ -32,5 +32,5 @@ class Object
 end
 
 def r
-  reload!
+  send "reload!"
 end
