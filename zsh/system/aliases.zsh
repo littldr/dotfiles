@@ -11,3 +11,8 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+# Vagrant alias
+alias vs="vagrant ssh"
+alias vh="vagrant halt"
+alias vu="vagrant up"
