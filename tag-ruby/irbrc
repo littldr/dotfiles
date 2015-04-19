@@ -31,6 +31,6 @@ class Object
   end
 end
 
-def r
+def reload
   send "reload!"
 end
