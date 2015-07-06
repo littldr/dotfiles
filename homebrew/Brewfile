@@ -1,8 +1,5 @@
-update
-upgrade
-
-install grc
-install coreutils
-install spark
-install pyenv-virtualenv
-install z
+brew "grc"
+brew "coreutils"
+brew "spark"
+brew "pyenv-virtualenv"
+brew "z"
