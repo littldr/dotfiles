@@ -44,6 +44,14 @@ do
   source $file
 done
 
+if [[ -d /usr/local/share/zsh/site-functions ]]; then
+  # load every completion in defined folder
+  for file in /usr/local/share/zsh/site-functions/*.zsh
+  do
+    source $file
+  done
+fi
+
 if [[ -x `which brew` ]]
 then
   source `brew --prefix`/etc/profile.d/z.sh
