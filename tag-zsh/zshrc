@@ -49,6 +49,14 @@ do
   source $file
 done
 
-source `brew --prefix`/etc/profile.d/z.sh
+if [[ -x `which brew` ]]
+then
+  source `brew --prefix`/etc/profile.d/z.sh
+fi
+
+if [[ -e ~/z/z.sh ]]
+then
+  source ~/z/z.sh
+fi
 
 unset config_files
