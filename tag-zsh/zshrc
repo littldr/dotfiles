@@ -44,9 +44,9 @@ do
   source $file
 done
 
-if [[ -d /usr/local/share/zsh/site-functions ]]; then
+if [[ -d /usr/local/share/zsh/site-functions && -n "$(ls -A /usr/local/share/zsh/site-functions)" ]]; then
   # load every completion in defined folder
-  for file in /usr/local/share/zsh/site-functions/*.zsh
+  for file in /usr/local/share/zsh/site-functions/*
   do
     source $file
   done
@@ -63,3 +63,7 @@ then
 fi
 
 unset config_files
+
+if [[ -e $HOME/.iterm2_shell_integration.zsh ]]; then
+  source $HOME/.iterm2_shell_integration.zsh
+fi
