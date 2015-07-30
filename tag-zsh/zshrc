@@ -34,10 +34,6 @@ do
   source $file
 done
 
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
-
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
@@ -64,6 +60,6 @@ fi
 
 unset config_files
 
-if [[ -e $HOME/.iterm2_shell_integration.zsh ]]; then
-  source $HOME/.iterm2_shell_integration.zsh
-fi
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
