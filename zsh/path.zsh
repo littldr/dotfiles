@@ -4,3 +4,4 @@ export ANDROID_HOME="/usr/local/opt/android-sdk"
 export GOPATH="$HOME/Workspace/GO"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
