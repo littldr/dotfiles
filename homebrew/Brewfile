@@ -1,6 +1,0 @@
-brew "grc"
-brew "coreutils"
-brew "spark"
-brew "pyenv-virtualenv"
-brew "z"
-brew "git-flow"

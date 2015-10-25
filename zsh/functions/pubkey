@@ -1,9 +1,0 @@
-local PUBKEYFILENAME="id_rsa.pub"
-if [ -n "$1" ]; then
-	PUBKEYFILENAME=$1
-fi
-
-if result=$(more $SSH_KEY_FOLDER/$PUBKEYFILENAME); then
-    echo "$result" | pbcopy
-    echo "=> Public key ($PUBKEYFILENAME) copied to pasteboard."
-fi

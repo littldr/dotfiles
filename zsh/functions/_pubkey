@@ -1,3 +1,0 @@
-#compdef pubkey
-## Delete .zcompdump if this isn't working!
-_files -W $SSH_KEY_FOLDER -g "*.pub"
