@@ -1,7 +1,1 @@
-for D in `find $HOME -maxdepth 1 -mindepth 1 -type d \( ! -regex '.*/\..*$' \)`
-do
-  alias `basename $D`="cd $(echo $D)/current"
-done
-
-alias restart='sudo monit restart'
-alias summary='sudo monit summary'
+../tag-bash/bashrc

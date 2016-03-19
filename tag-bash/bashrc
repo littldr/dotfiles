@@ -1,0 +1,85 @@
+# <<EOF
+# Following Options are inspired from sensible-bash
+# All credits goes to: @mrzool (https://github.com/mrzool/bash-sensible Version: 0.2.1)
+#
+# Update window size
+shopt -s checkwinsize
+# Trim long Directory paths
+PROMPT_DIRTRIM=3
+# Enable history expansion with space
+# E.g. typing !!<space> will replace the !! with your last command
+bind Space:magic-space
+# Turn on recursive globbing (enables ** to recurse all directories)
+shopt -s globstar 2> /dev/null
+# Perform file completion in a case insensitive fashion
+bind 'set completion-ignore-case on'
+# Treat hyphens and underscores as equivalent
+bind 'set completion-map-case on'
+# Display matches for ambiguous patterns at first tab press
+bind 'set show-all-if-ambiguous on'
+# Append to the history file, don't overwrite it
+shopt -s histappend
+# Save multi-line commands as one command
+shopt -s cmdhist
+# Record each line as it gets issued
+PROMPT_COMMAND='history -a'
+# Avoid duplicate entries
+HISTCONTROL='erasedups:ignoreboth'
+# Useful timestamp format
+HISTTIMEFORMAT='%F %T '
+# Enable incremental history search with up/down arrows (also Readline goodness)
+# Learn more about this here: http://codeinthehole.com/writing/the-most-important-command-line-tip-incremental-history-searching-with-inputrc/
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+# Prepend cd to directory names automatically
+shopt -s autocd 2> /dev/null
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
+# EOF
+
+# Fix Key inputs
+# Note for further development:
+# Press CTRL+v before pressing any keyboard combination to see the RAW input
+# Fix Shift + left/right arrows
+bind '"\e[C": forward-char'
+bind '"\e[D": backward-char'
+bind '"\e[1;2C": forward-word'
+bind '"\e[1;2D": backward-word'
+
+# Set some global variables
+# History size
+HISTSIZE=1000000
+HISTFILESIZE=1000000
+HISTIGNORE='&:[ ]*:exit:ls:bg:fg:jobs:history:clear'
+# Brew stuff
+# System stuff
+IFS=$'\n\t' # Default: $' \n\t'. Remove space to allow iteration over files with spaces.
+# CD Shortcuts. cd will look for target in the following directories.
+# Seperate by colons
+CDPATH='.:~:~/Workspace'
+
+SYSTEM_PREFIX=$(brew --prefix 2> /dev/null)
+# Enable bash completion
+if [ -f ${SYSTEM_PREFIX}/etc/bash_completion ]; then
+  source ${SYSTEM_PREFIX}/etc/bash_completion
+fi
+
+# source all files from bash configuration directory
+CONFIG_DIR=$HOME/.bash
+if [ -d $SSHHOME ]; then
+  # if connected via sshrc, require configuration from $SSHHOME/.sshrc.d/bash
+  CONFIG_DIR=$SSHHOME/.sshrc.d/bash
+fi
+
+if [ -d $CONFIG_DIR ]; then
+  for file in $CONFIG_DIR/**/*; do
+    source $file
+  done
+fi
+
+# Allow local settings for different hosts
+if [ -f ~/.bashrc.local ]; then
+  source ~/.bashrc.local
+fi
