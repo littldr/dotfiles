@@ -3,11 +3,8 @@
 	email = E-Mail
 [alias]
 	co = checkout
-	up = pull --rebase
 	ci = commit
   st = status
-	wtf = !$ZSH/../bin/git-wtf
-	do = !git stash && git up && git push && git stash pop
 	l = !git --no-pager log -n 20
 [color]
 	diff = auto
@@ -15,7 +12,7 @@
 	branch = auto
 [core]
 	excludesfile = $HOME.gitignore
-	editor = subl --wait
+	editor = vim
 	autocrlf = input
 [apply]
 	whitespace = nowarn

@@ -2,24 +2,32 @@
 
 My personal dotfiles build from scratch!
 
+## Back to the roots
+
+After years of searching for the perfect shell, i'm switching back to good old `bash`.
+After this commit, everything will be `bash` compatible.
+If you are interested in the old configurations look back in the history of this repo.
+([:fish: Fish](https://github.com/LAndreas/dotfiles/tree/05ce8e4d4df4fa6d8b5fea55e12fc9c0b7030832), [ZSH](https://github.com/LAndreas/dotfiles/tree/380d1ad3dea2ae6ab9c8f52e3c6b29ebaf5a4fcb))
+
 ## Requirements
 
-1. Clone the Repo
-```
-git clone --recurse-submodules git@github.com:LAndreas/dotfiles.git ~/.dotfiles
-```
+1. Install `brew` (see: [Install Homebrew](http://brew.sh/))
 
-2. Install :fish::
-```
-brew install fish
-chsh -s /usr/local/bin/fish $USER
-```
+3. Clone the Repo
+  ```
+  git clone --recurse-submodules git@github.com:LAndreas/dotfiles.git ~/.dotfiles
+  ```
 
-3. Install rcm:
-```
-brew tap thoughtbot/formulae
-brew install rcm
-```
+3. Install `rcm`:
+  * Install `rcm` via `brew`
+    ```
+    brew tap thoughtbot/formulae
+    brew install rcm
+    ```
+  * (Optional) Use [```Brewfile```](/Brewfile) to install everyhing (including `rcm`)
+    ```
+    brew bundle --file=~/.dotfiles/Brewfile
+    ```
 
 ## Install
 
@@ -33,12 +41,6 @@ ln -s ~/.dotfiles/rcrc ~/.rcrc
 rcup
 ```
 
-3. (Optional) To use the provided [```Brewfile```](/Brewfile) install ```brew bundle```:
-```
-brew tap Homebrew/bundle
-brew bundle
-```
-
 ## Update
 
 1. Update Repo
@@ -49,4 +51,11 @@ git -C ~/.dotfiles/ pull
 2. Link new files
 ```
 rcup
+```
+
+## Uninstall
+
+```
+rcdn
+rm -Rf ~/.dotfiles
 ```

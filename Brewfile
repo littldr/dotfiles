@@ -1,5 +1,8 @@
+tap 'thoughtbot/formulae'
+
+brew 'bash'
 brew 'coreutils'
-brew 'z'
-brew 'git-flow'
 brew 'rbenv'
 brew 'ruby-build'
+brew 'tig'
+brew 'rcm'
