@@ -68,7 +68,7 @@ fi
 
 # source all files from bash configuration directory
 CONFIG_DIR=$HOME/.bash
-if [ -d $SSHHOME ]; then
+if [ -n "$SSHHOME" ]; then
   # if connected via sshrc, require configuration from $SSHHOME/.sshrc.d/bash
   CONFIG_DIR=$SSHHOME/.sshrc.d/bash
 fi
