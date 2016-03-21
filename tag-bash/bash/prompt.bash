@@ -27,5 +27,9 @@ _rbenv_prompt_info() {
 	[[ -e .ruby-version ]] && echo -en " $RED<$(rbenv version-name)>$NO_COLOR"
 }
 
-export PS1="╭─\$(tput bold)$GREEN\u@\h $BLUE\w\$(_git_prompt_info)\$(_rbenv_prompt_info)\$(tput sgr0)
+_exenv_prompt_info() {
+	[[ -e .exenv-version ]] && echo -en " $PURPLE<$(exenv version-name)>$NO_COLOR"
+}
+
+export PS1="╭─$GREEN\u@\h $BLUE\w\$(_git_prompt_info)\$(_rbenv_prompt_info)\$(_exenv_prompt_info)$NO_COLOR
 ╰─𝇇 "

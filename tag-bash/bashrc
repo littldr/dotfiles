@@ -78,3 +78,11 @@ fi
 if [ -f ~/.bashrc.local ]; then
   source ~/.bashrc.local
 fi
+
+if [ $(which rbenv) ]; then
+  eval "$(rbenv init -)"
+fi
+
+if [ $(which exenv) ]; then
+  eval "$(exenv init -)"
+fi
