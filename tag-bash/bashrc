@@ -15,8 +15,6 @@ shopt -s globstar 2> /dev/null
 bind 'set completion-ignore-case on'
 # Treat hyphens and underscores as equivalent
 bind 'set completion-map-case on'
-# Display matches for ambiguous patterns at first tab press
-bind 'set show-all-if-ambiguous on'
 # Append to the history file, don't overwrite it
 shopt -s histappend
 # Save multi-line commands as one command
@@ -56,9 +54,6 @@ HISTIGNORE='&:[ ]*:exit:ls:bg:fg:jobs:history:clear'
 # Brew stuff
 # System stuff
 IFS=$'\n\t' # Default: $' \n\t'. Remove space to allow iteration over files with spaces.
-# CD Shortcuts. cd will look for target in the following directories.
-# Seperate by colons
-CDPATH='.:~:~/Workspace'
 
 SYSTEM_PREFIX=$(brew --prefix 2> /dev/null)
 # Enable bash completion
