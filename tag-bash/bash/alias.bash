@@ -1,4 +1,4 @@
-if [ $(uname) == 'Darwin'  ]; then
+if [ $(uname) == 'Darwin' ]; then
   # OSX aliases
   alias ls='ls -G'
   alias ll='ls -al'

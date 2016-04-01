@@ -5,6 +5,7 @@ tap 'thoughtbot/formulae'
 tap 'homebrew/completions'
 
 brew 'coreutils'
+brew 'gnu-tar'
 brew 'rbenv'
 brew 'ruby-build'
 brew 'exenv'
