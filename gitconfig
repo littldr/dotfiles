@@ -1,0 +1,23 @@
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  l = !git --no-pager log -n 20
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+  excludesfile = $HOME.gitignore
+  editor = vim
+  autocrlf = input
+[apply]
+  whitespace = nowarn
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[push]
+  default = tracking
+[help]
+  autocorrect = 5
+[include]
+  path = ~/.gitcredentials
