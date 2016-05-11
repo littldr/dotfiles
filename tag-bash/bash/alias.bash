@@ -7,3 +7,5 @@ else
   alias ls='ls --color=auto'
   alias ll='ls -la'
 fi
+
+alias doc='docker-compose'
