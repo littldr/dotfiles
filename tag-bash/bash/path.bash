@@ -6,3 +6,5 @@ fi
 if [ -d /usr/local/opt/gnu-tar/libexec/gnuman ]; then
   MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
 fi
+
+PATH="$PATH:./node_modules/.bin"
