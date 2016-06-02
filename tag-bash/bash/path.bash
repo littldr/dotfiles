@@ -1,3 +1,5 @@
+PATH="/usr/local/sbin:$PATH"
+
 # OSX needs gnu-tar to work correctly with sshrc, so add this to path if the binary is available
 if [ -d /usr/local/opt/gnu-tar/libexec/gnubin ]; then
   PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
