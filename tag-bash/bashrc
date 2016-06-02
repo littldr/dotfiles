@@ -9,8 +9,6 @@ PROMPT_DIRTRIM=3
 # Enable history expansion with space
 # E.g. typing !!<space> will replace the !! with your last command
 bind Space:magic-space
-# Turn on recursive globbing (enables ** to recurse all directories)
-shopt -s globstar 2> /dev/null
 # Perform file completion in a case insensitive fashion
 bind 'set completion-ignore-case on'
 # Treat hyphens and underscores as equivalent
@@ -61,6 +59,8 @@ if [ -f ${SYSTEM_PREFIX}/etc/bash_completion ]; then
   source ${SYSTEM_PREFIX}/etc/bash_completion
 fi
 
+# Turn on recursive globbing (enables ** to recurse all directories)
+shopt -s globstar 2> /dev/null
 # source all files from bash configuration directory
 CONFIG_DIR=$HOME/.bash
 if [ -n "$SSHHOME" ]; then
@@ -81,6 +81,12 @@ fi
 
 if [ $(which rbenv) ]; then
   eval "$(rbenv init -)"
+fi
+
+if [ -f ${SYSTEM_PREFIX}/opt/nvm/nvm.sh ]; then
+  mkdir -p ~/.nvm
+  export NVM_DIR="$HOME/.nvm"
+  . "${SYSTEM_PREFIX}/opt/nvm/nvm.sh"
 fi
 
 if [ $(which exenv) ]; then
