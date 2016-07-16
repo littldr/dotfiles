@@ -10,3 +10,5 @@ if [ -d /usr/local/opt/gnu-tar/libexec/gnuman ]; then
 fi
 
 PATH="$PATH:./node_modules/.bin"
+
+export GOPATH="$HOME/Workspace/gocode"
