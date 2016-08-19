@@ -21,3 +21,5 @@
   autocorrect = 5
 [include]
   path = ~/.gitcredentials
+[http]
+  cookiefile = ~/.gitcookies
