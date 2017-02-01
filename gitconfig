@@ -5,6 +5,7 @@
   l = !git --no-pager log -n 20
   gi = "!gi() { curl -s https://www.gitignore.io/api/$@ ;}; gi"
   stat = !git diff --stat
+  fpull = !git fetch origin && git reset --hard FETCH_HEAD
 [color]
   diff = auto
   status = auto
