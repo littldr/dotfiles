@@ -3,6 +3,8 @@
   ci = commit
   st = status
   l = !git --no-pager log -n 20
+  gi = "!gi() { curl -s https://www.gitignore.io/api/$@ ;}; gi"
+  stat = !git diff --stat
 [color]
   diff = auto
   status = auto
@@ -16,10 +18,12 @@
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [push]
-  default = tracking
+  default = current
 [help]
   autocorrect = 5
 [include]
   path = ~/.gitcredentials
 [http]
   cookiefile = ~/.gitcookies
+[rerere]
+  enabled = true
