@@ -6,6 +6,7 @@
   gi = "!gi() { curl -s https://www.gitignore.io/api/$@ ;}; gi"
   stat = !git diff --stat
   fpull = !git fetch origin && git reset --hard FETCH_HEAD
+  fpush = !git push --force-with-lease
 [color]
   diff = auto
   status = auto
@@ -28,3 +29,5 @@
   cookiefile = ~/.gitcookies
 [rerere]
   enabled = true
+[merge]
+  ff = only
