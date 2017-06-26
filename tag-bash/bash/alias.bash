@@ -8,8 +8,6 @@ else
   alias ll='ls -la'
 fi
 
-alias doc='docker-compose'
-
 man() {
   # Source: http://boredzo.org/blog/archives/2016-08-15/colorized-man-pages-understood-and-customized
   env \
