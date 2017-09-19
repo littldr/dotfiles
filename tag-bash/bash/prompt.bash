@@ -3,6 +3,7 @@ BLUE="\033[1;34m"
 RED="\033[1;31m"
 MAGENTA="\033[0;35m"
 PURPLE="\033[2;35m"
+YELLOW="\033[1;33m"
 NO_COLOR="\033[0m"
 
 GIT_PROMPT_CLEAN='✓'
@@ -31,5 +32,9 @@ _exenv_prompt_info() {
 	[[ -e .exenv-version ]] && echo -en " $PURPLE<$(exenv version-name)>$NO_COLOR"
 }
 
-export PS1="╭─$GREEN\u@\h $BLUE\w\$(_git_prompt_info)\$(_rbenv_prompt_info)\$(_exenv_prompt_info)$NO_COLOR
+_docker_machine_name_info() {
+  [[ -n "$DOCKER_MACHINE_NAME" ]] && echo -en " $YELLOW[$DOCKER_MACHINE_NAME]$NO_COLOR"
+}
+
+export PS1="╭─$GREEN\u@\h $BLUE\w\$(_git_prompt_info)\$(_rbenv_prompt_info)\$(_exenv_prompt_info)\$(_docker_machine_name_info)$NO_COLOR
 ╰─𝇇 "
