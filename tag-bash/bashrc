@@ -92,3 +92,7 @@ fi
 if [ $(which exenv) ]; then
   eval "$(exenv init -)"
 fi
+
+if [ -z "$(pgrep gpg-agent)" ]; then
+  gpg-agent --daemon > /dev/null
+fi
