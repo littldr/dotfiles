@@ -1,22 +1,22 @@
-brew 'bash'
-brew 'bash-completion'
-
-tap 'thoughtbot/formulae'
-tap 'homebrew/completions'
+tap 'thoughtbot/formulae' # Needed for rcm
+brew 'rcm' # Dotfile Manager https://github.com/thoughtbot/rcm
 
 brew 'coreutils'
 brew 'gnu-tar'
+brew 'bash'
+brew 'bash-completion'
+
 brew 'rbenv'
 brew 'ruby-build'
+
 brew 'exenv'
-brew 'elixir-build'
 brew 'erlang'
-brew 'tig'
-brew 'rcm'
-brew 'sshrc'
-brew 'tmux'
-brew 'reattach-to-user-namespace'
+brew 'elixir-build'
+
+# Tools for commit signing
 brew 'gnupg'
 brew 'gpg-agent'
 brew 'pinentry-mac'
-brew 'fzf'
+
+brew 'fzf' # A command-line fuzzy finder https://github.com/junegunn/fzf
+
