@@ -27,3 +27,10 @@ brew 'pinentry-mac'
 
 brew 'fzf' # A command-line fuzzy finder https://github.com/junegunn/fzf
 
+# Kubernetes Enviroment
+brew 'kubectl'
+# Kubectx (https://github.com/ahmetb/kubectx) provides following binaries:
+# * kctx - switch k8s context
+# * kns - swtich k8s namespace
+brew 'kubectx', args: %w[with-short-names]
+cask 'minikube'
