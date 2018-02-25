@@ -6,6 +6,13 @@ brew 'gnu-tar'
 brew 'bash'
 brew 'bash-completion'
 
+brew 'git'
+brew 'jq'
+brew 'parallel'
+brew 'pgcli'
+
+cask 'amethyst' # Window Manager https://ianyh.com/amethyst/
+
 brew 'rbenv'
 brew 'ruby-build'
 
