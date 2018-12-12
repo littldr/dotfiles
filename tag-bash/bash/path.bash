@@ -1,16 +1,20 @@
-PATH="/usr/local/sbin:$PATH"
+PATH="/usr/local/sbin:${PATH}"
 
-# OSX needs gnu-tar to work correctly with sshrc, so add this to path if the binary is available
-if [ -d /usr/local/opt/gnu-tar/libexec/gnubin ]; then
-  PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+# Use GNU tools
+if [ -d ${SYSTEM_PREFIX}/opt/coreutils/libexec/gnubin ]; then
+  PATH="${SYSTEM_PREFIX}/coreutils/libexec/gnubin:${PATH}"
+  MANPATH="${SYSTEM_PREFIX}/gnu-tar/libexec/gnuman:${MANPATH}"
 fi
 
-if [ -d /usr/local/opt/gnu-tar/libexec/gnuman ]; then
-  MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
+if [ -d ${SYSTEM_PREFIX}/opt/gnu-tar/libexec/gnubin ]; then
+  PATH="${SYSTEM_PREFIX}/gnu-tar/libexec/gnubin:${PATH}"
+  MANPATH="${SYSTEM_PREFIX}/gnu-tar/libexec/gnuman:${MANPATH}"
 fi
 
-PATH="$PATH:./node_modules/.bin"
-PATH="$PATH:$HOME/.bin"
+if [ -d ${SYSTEM_PREFIX}/opt/gnu-sed/libexec/gnubin ]; then
+  PATH="${SYSTEM_PREFIX}/gnu-sed/libexec/gnubin:${PATH}"
+  MANPATH="${SYSTEM_PREFIX}/gnu-sed/libexec/gnuman:${MANPATH}"
+fi
 
-export GOPATH="$HOME/Workspace/gocode"
-export PATH="$PATH:$GOPATH/bin"
+PATH="${PATH}:./node_modules/.bin"
+PATH="${PATH}:${HOME}/.bin"

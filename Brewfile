@@ -3,15 +3,21 @@ brew 'rcm' # Dotfile Manager https://github.com/thoughtbot/rcm
 
 brew 'coreutils'
 brew 'gnu-tar'
+brew 'gnu-sed'
 brew 'bash'
 brew 'bash-completion'
+brew 'curl'
+brew 'htop'
+brew 'the_silver_searcher'
+brew 'tree'
+brew 'unrar'
+brew 'watch'
+brew 'z'
 
 brew 'git'
 brew 'jq'
 brew 'parallel'
 brew 'pgcli'
-
-cask 'amethyst' # Window Manager https://ianyh.com/amethyst/
 
 brew 'rbenv'
 brew 'ruby-build'
@@ -34,3 +40,13 @@ brew 'kubectl'
 # * kns - swtich k8s namespace
 brew 'kubectx', args: %w[with-short-names]
 cask 'minikube'
+
+brew 'awscli'
+cask 'aws-vault'
+
+cask 'dropbox'
+cask 'docker'
+cask '1password'
+cask 'google-chrome'
+cask 'google-backup-and-sync'
+cask 'caffeine'

@@ -83,16 +83,40 @@ if [ $(which rbenv) ]; then
   eval "$(rbenv init -)"
 fi
 
-if [ -f ${SYSTEM_PREFIX}/opt/nvm/nvm.sh ]; then
-  mkdir -p ~/.nvm
-  export NVM_DIR="$HOME/.nvm"
-  . "${SYSTEM_PREFIX}/opt/nvm/nvm.sh"
+# Enable z
+if [ -f ${SYSTEM_PREFIX}/etc/profile.d/z.sh ]; then
+  source ${SYSTEM_PREFIX}/etc/profile.d/z.sh
 fi
 
-if [ $(which exenv) ]; then
-  eval "$(exenv init -)"
+# fzf Auto-completion
+# ---------------
+if [[ $- == *i* ]]; then
+  if [ -f ${SYSTEM_PREFIX}/opt/fzf/shell/completion.bash ]; then
+    source ${SYSTEM_PREFIX}/opt/fzf/shell/completion.bash 2>/dev/null
+  fi
+  # Enable key-bindings
+  if [ -f ${SYSTEM_PREFIX}/opt/fzf/shell/key-bindings.bash ]; then
+    source ${SYSTEM_PREFIX}/opt/fzf/shell/key-bindings.bash
+  fi
 fi
 
 if [ -z "$(pgrep gpg-agent)" ]; then
   gpg-agent --daemon > /dev/null
 fi
+
+# Enable travis gem
+if [ -f $HOME/.travis/travis.sh ]; then
+  source $HOME/.travis/travis.sh
+fi
+
+# Enable shell history in IEX
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL=
