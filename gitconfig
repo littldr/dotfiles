@@ -29,5 +29,3 @@
   cookiefile = ~/.gitcookies
 [rerere]
   enabled = true
-[merge]
-  ff = only
