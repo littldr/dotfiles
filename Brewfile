@@ -28,7 +28,6 @@ brew 'elixir-build'
 
 # Tools for commit signing
 brew 'gnupg'
-brew 'gpg-agent'
 brew 'pinentry-mac'
 
 brew 'fzf' # A command-line fuzzy finder https://github.com/junegunn/fzf
@@ -50,3 +49,6 @@ cask '1password'
 cask 'google-chrome'
 cask 'google-backup-and-sync'
 cask 'caffeine'
+cask 'iterm2'
+cask 'visual-studio-code'
+cask 'clipy'
