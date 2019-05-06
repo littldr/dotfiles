@@ -12,10 +12,14 @@ If you are interested in the old configurations look back in the history of this
 ## Requirements
 
 1. Install `brew` (see: [Install Homebrew](http://brew.sh/))
+2. Install `git`
+  ```
+  brew install git
+  ```
 
 3. Clone the Repo
   ```
-  git clone --recurse-submodules git@github.com:LAndreas/dotfiles.git ~/.dotfiles
+  git clone git@github.com:littldr/dotfiles.git ~/.dotfiles
   ```
 
 3. Install `rcm`:
