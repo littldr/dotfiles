@@ -45,7 +45,9 @@ cask 'aws-vault'
 
 cask 'dropbox'
 cask 'docker'
-cask '1password'
+# Installs latest 1password. With the lifetime license you can only use 1password 6.
+# Download and install it from here: https://app-updates.agilebits.com/download/OPM4
+# cask '1password'
 cask 'google-chrome'
 cask 'google-backup-and-sync'
 cask 'caffeine'
