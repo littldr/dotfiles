@@ -88,6 +88,11 @@ if [ -f ${SYSTEM_PREFIX}/etc/profile.d/z.sh ]; then
   source ${SYSTEM_PREFIX}/etc/profile.d/z.sh
 fi
 
+# Enable asdf
+if [ -f ${SYSTEM_PREFIX}/opt/asdf/asdf.sh ]; then
+  source ${SYSTEM_PREFIX}/opt/asdf/asdf.sh
+fi
+
 # fzf Auto-completion
 # ---------------
 if [[ $- == *i* ]]; then
