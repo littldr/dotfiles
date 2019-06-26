@@ -17,5 +17,5 @@ man() {
     LESS_TERMCAP_se=$(printf "\e[0m") \
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
     LESS_TERMCAP_ue=$(printf "\e[0m") \
-      man "$@"
+    man "$@"
 }

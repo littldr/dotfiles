@@ -10,10 +10,10 @@ GIT_PROMPT_CLEAN='✓'
 GIT_PROMPT_DIRTY='✗'
 
 _git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  ref=$(git symbolic-ref HEAD 2>/dev/null) || ref=$(git rev-parse --short HEAD 2>/dev/null) || return
   ref=${ref#refs/heads/}
   if [[ ! -z ref ]]; then
-    GIT_STATUS="$(git status -s 2> /dev/null | tail -n1)"
+    GIT_STATUS="$(git status -s 2>/dev/null | tail -n1)"
     echo -en " $MAGENTA<$ref"
     if [[ -n $GIT_STATUS ]]; then
       echo -en "$RED$GIT_PROMPT_DIRTY"
@@ -25,11 +25,11 @@ _git_prompt_info() {
 }
 
 _rbenv_prompt_info() {
-	[[ -e .ruby-version ]] && echo -en " $RED<$(rbenv version-name)>$NO_COLOR"
+  [[ -e .ruby-version ]] && echo -en " $RED<$(rbenv version-name)>$NO_COLOR"
 }
 
 _exenv_prompt_info() {
-	[[ -e .exenv-version ]] && echo -en " $PURPLE<$(exenv version-name)>$NO_COLOR"
+  [[ -e .exenv-version ]] && echo -en " $PURPLE<$(exenv version-name)>$NO_COLOR"
 }
 
 _docker_machine_name_info() {

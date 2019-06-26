@@ -28,11 +28,11 @@ HISTTIMEFORMAT='%F %T '
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 # Prepend cd to directory names automatically
-shopt -s autocd 2> /dev/null
+shopt -s autocd 2>/dev/null
 # Correct spelling errors during tab-completion
-shopt -s dirspell 2> /dev/null
+shopt -s dirspell 2>/dev/null
 # Correct spelling errors in arguments supplied to cd
-shopt -s cdspell 2> /dev/null
+shopt -s cdspell 2>/dev/null
 # EOF
 
 # Fix Key inputs
@@ -53,14 +53,14 @@ HISTIGNORE='&:[ ]*:exit:ls:bg:fg:jobs:history:clear'
 # System stuff
 IFS=$'\n\t' # Default: $' \n\t'. Remove space to allow iteration over files with spaces.
 
-SYSTEM_PREFIX=$(brew --prefix 2> /dev/null)
+SYSTEM_PREFIX=$(brew --prefix 2>/dev/null)
 # Enable bash completion
 if [ -f ${SYSTEM_PREFIX}/etc/bash_completion ]; then
   source ${SYSTEM_PREFIX}/etc/bash_completion
 fi
 
 # Turn on recursive globbing (enables ** to recurse all directories)
-shopt -s globstar 2> /dev/null
+shopt -s globstar 2>/dev/null
 # source all files from bash configuration directory
 CONFIG_DIR=$HOME/.bash
 if [ -n "$SSHHOME" ]; then
@@ -101,7 +101,7 @@ if [[ $- == *i* ]]; then
 fi
 
 if [ -z "$(pgrep gpg-agent)" ]; then
-  gpg-agent --daemon > /dev/null
+  gpg-agent --daemon >/dev/null
 fi
 
 # Enable travis gem
