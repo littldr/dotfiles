@@ -16,5 +16,10 @@ if [ -d ${SYSTEM_PREFIX}/opt/gnu-sed/libexec/gnubin ]; then
   MANPATH="${SYSTEM_PREFIX}/gnu-sed/libexec/gnuman:${MANPATH}"
 fi
 
+if [ -d ${SYSTEM_PREFIX}/opt/curl/bin ]; then
+  PATH="${SYSTEM_PREFIX}/opt/curl/bin:$PATH"
+  MANPATH="${SYSTEM_PREFIX}/opt/curl/share/man:${MANPATH}"
+fi
+
 PATH="${PATH}:./node_modules/.bin"
 PATH="${PATH}:${HOME}/.bin"
