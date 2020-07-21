@@ -79,10 +79,6 @@ if [ -f ~/.bashrc.local ]; then
   source ~/.bashrc.local
 fi
 
-if [ $(which rbenv) ]; then
-  eval "$(rbenv init -)"
-fi
-
 # Enable z
 if [ -f ${SYSTEM_PREFIX}/etc/profile.d/z.sh ]; then
   source ${SYSTEM_PREFIX}/etc/profile.d/z.sh
