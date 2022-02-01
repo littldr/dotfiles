@@ -7,6 +7,8 @@
   stat = !git diff --stat
   fpull = !git fetch origin && git reset --hard FETCH_HEAD
   fpush = !git push --force-with-lease
+  recent = branch --sort=-committerdate --format="%(committerdate:relative)%09%(refname:short)"
+  set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 [color]
   diff = auto
   status = auto
@@ -29,3 +31,8 @@
   cookiefile = ~/.gitcookies
 [rerere]
   enabled = true
+[user]
+  name = Andreas Litt
+  email = andreas.litt@visable.com
+[init]
+	defaultBranch = main

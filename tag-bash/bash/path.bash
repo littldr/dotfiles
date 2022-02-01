@@ -23,3 +23,5 @@ fi
 
 PATH="${PATH}:./node_modules/.bin"
 PATH="${PATH}:${HOME}/.bin"
+PATH="${PATH}:${HOME}/.krew/bin"
+PATH="${PATH}:${HOME}/go/bin/"

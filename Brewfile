@@ -1,6 +1,9 @@
 tap 'thoughtbot/formulae' # Needed for rcm
 brew 'rcm' # Dotfile Manager https://github.com/thoughtbot/rcm
 
+tap 'homebrew/cask-fonts'
+cask 'font-source-code-pro'
+
 brew 'coreutils'
 brew 'gnu-tar'
 brew 'gnu-sed'
