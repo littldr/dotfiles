@@ -1,59 +1,39 @@
-tap 'thoughtbot/formulae' # Needed for rcm
 brew 'rcm' # Dotfile Manager https://github.com/thoughtbot/rcm
-
-tap 'homebrew/cask-fonts'
-cask 'font-source-code-pro'
 
 brew 'coreutils'
 brew 'gnu-tar'
 brew 'gnu-sed'
 brew 'bash'
 brew 'bash-completion'
+brew 'starship'
 brew 'curl'
 brew 'htop'
-brew 'the_silver_searcher'
 brew 'tree'
 brew 'unrar'
 brew 'watch'
 brew 'z'
+brew 'fz'
 
 brew 'git'
+brew 'git-lfs'
 brew 'jq'
 brew 'parallel'
 brew 'pgcli'
 
-brew 'rbenv'
 brew 'ruby-build'
-
-brew 'exenv'
-brew 'erlang'
-brew 'elixir-build'
-
-# Tools for commit signing
-brew 'gnupg'
-brew 'pinentry-mac'
+brew 'asdf'
 
 brew 'fzf' # A command-line fuzzy finder https://github.com/junegunn/fzf
 
-# Kubernetes Enviroment
-brew 'kubectl'
-# Kubectx (https://github.com/ahmetb/kubectx) provides following binaries:
-# * kctx - switch k8s context
-# * kns - swtich k8s namespace
-brew 'kubectx', args: %w[with-short-names]
-cask 'minikube'
-
-brew 'awscli'
-cask 'aws-vault'
-
-cask 'dropbox'
 cask 'docker'
-# Installs latest 1password. With the lifetime license you can only use 1password 6.
-# Download and install it from here: https://app-updates.agilebits.com/download/OPM4
-# cask '1password'
 cask 'google-chrome'
-cask 'google-backup-and-sync'
-cask 'caffeine'
-cask 'iterm2'
+cask 'ghostty'
 cask 'visual-studio-code'
-cask 'clipy'
+cask 'maccy'
+cask 'obsidian'
+cask 'signal'
+cask 'spotify'
+
+mas 'Bitwarden', id: 1352778147
+mas 'Magnet', id: 441258766
+mas 'Xcode', id: 497799835

@@ -23,6 +23,7 @@
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [push]
   default = current
+	autoSetupRemote = true
 [help]
   autocorrect = 5
 [include]
@@ -31,8 +32,10 @@
   cookiefile = ~/.gitcookies
 [rerere]
   enabled = true
-[user]
-  name = Andreas Litt
-  email = andreas.litt@visable.com
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

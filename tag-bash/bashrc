@@ -53,7 +53,9 @@ HISTIGNORE='&:[ ]*:exit:ls:bg:fg:jobs:history:clear'
 # System stuff
 IFS=$'\n\t' # Default: $' \n\t'. Remove space to allow iteration over files with spaces.
 
-SYSTEM_PREFIX=$(brew --prefix 2>/dev/null)
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+SYSTEM_PREFIX=$HOMEBREW_PREFIX
 # Enable bash completion
 if [ -f ${SYSTEM_PREFIX}/etc/bash_completion ]; then
   source ${SYSTEM_PREFIX}/etc/bash_completion
@@ -117,14 +119,4 @@ export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL=
 
-# Android development setup
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-#export ANDROID_HOME=/usr/local/share/android-sdk
-
 eval "$(starship init bash)"
-
-###-tns-completion-start-###
-if [ -f /Users/litt/.tnsrc ]; then 
-    source /Users/litt/.tnsrc 
-fi
-###-tns-completion-end-###
