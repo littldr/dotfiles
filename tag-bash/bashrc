@@ -103,10 +103,6 @@ if [[ $- == *i* ]]; then
   fi
 fi
 
-if [ -z "$(pgrep gpg-agent)" ]; then
-  gpg-agent --daemon >/dev/null
-fi
-
 # Enable shell history in IEX
 export ERL_AFLAGS="-kernel shell_history enabled"
 
