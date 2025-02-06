@@ -26,8 +26,6 @@
 	autoSetupRemote = true
 [help]
   autocorrect = 5
-[include]
-  path = ~/.gitcredentials
 [http]
   cookiefile = ~/.gitcookies
 [rerere]
@@ -39,3 +37,11 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[include]
+  path = ~/.gitcredentials
+[includeIf "gitdir:~/dev/work/"]
+  path = ~/.gitcredentials.work
