@@ -22,26 +22,43 @@
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [push]
-  default = current
-	autoSetupRemote = true
+  default = simple
+  autoSetupRemote = true
+  followTags = true
 [help]
-  autocorrect = 5
+  autocorrect = prompt
 [http]
   cookiefile = ~/.gitcookies
 [rerere]
   enabled = true
+  autoupdate = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
 [gpg]
-	format = ssh
+  format = ssh
 [commit]
-	gpgsign = true
+  gpgsign = true
+  verbose = true
 [include]
   path = ~/.gitcredentials
 [includeIf "gitdir:~/dev/work/"]
   path = ~/.gitcredentials.work
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[tag]
+  sort = version:refname
+[diff]
+  colorMoved = plain
+  algorithm = histogram
+  renames = true
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
