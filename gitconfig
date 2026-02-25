@@ -9,6 +9,8 @@
   fpush = !git push --force-with-lease
   recent = branch --sort=-committerdate --format="%(committerdate:relative)%09%(refname:short)"
   set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+  show-outdated = !git fetch --all --prune && git branch -vv | grep ': gone]'
+  cleanup = !git show-outdated | awk '{print $1}' | xargs git branch -D
 [color]
   diff = auto
   status = auto
@@ -62,3 +64,5 @@
   prune = true
   pruneTags = true
   all = true
+[pull]
+	rebase = true
