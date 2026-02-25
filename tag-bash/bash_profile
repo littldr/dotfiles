@@ -4,3 +4,12 @@ fi
 
 # https://github.com/asdf-community/asdf-golang?tab=readme-ov-file#version-selection
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init.bash 2>/dev/null || :
+
+# Scaleway CLI autocomplete initialization.
+eval "$(scw autocomplete script shell=bash)"
+
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
